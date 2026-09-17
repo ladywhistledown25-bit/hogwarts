@@ -261,11 +261,11 @@
 }
 
 .hog-1x1-texto-scroll {
-  font-family: 'EB Garamond', serif;
+  font-family: 'Georgia', 'Times New Roman', serif;
   max-height: 450px;
   overflow-y: auto;
   padding: 6px 10px 18px;
-  font-size: 11px;
+  font-size: 16px;
   line-height: 1.75;
   text-align: justify;
   white-space: pre-line;
