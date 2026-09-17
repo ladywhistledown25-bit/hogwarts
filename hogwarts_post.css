@@ -211,6 +211,10 @@
 .hog-post-contenedor * { scrollbar-width: thin; scrollbar-color: var(--hog-post-acento) var(--hog-post-bg-panel); }
 
 /* ===== CRÉDITOS ===== */
+.hog-post-contenedor a:link, .hog-post-contenedor a:visited, .hog-post-contenedor a:hover, .hog-post-contenedor a:active {
+  color: var(--hog-post-acento);
+  text-decoration: none;
+}
 .hog-post-credits {
   text-align: center;
   margin-top: 22px;
@@ -220,7 +224,7 @@
   font-size: 10px;
   margin: 0 10px;
 }
-.hog-post-credit-name {
+.hog-post-contenedor .hog-post-credit-name {
   font-family: 'Cormorant Garamond', serif;
   text-transform: uppercase;
   letter-spacing: 3px;
@@ -228,4 +232,4 @@
   color: rgba(224, 138, 60, 0.45);
   text-decoration: none;
 }
-.hog-post-credit-name:hover { color: rgba(224, 138, 60, 0.75); transition: color 0.2s ease; }
+.hog-post-contenedor .hog-post-credit-name:hover { color: rgba(224, 138, 60, 0.75); transition: color 0.2s ease; }
