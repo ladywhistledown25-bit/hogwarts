@@ -302,11 +302,11 @@
 .hog-scroll-personajes {
   display: flex;
   justify-content: center;
-  gap: 8px;
+  gap: 16px;
   padding-bottom: 12px;
 }
 .hog-caja-personaje {
-  flex: 0 0 180px;
+  flex: 0 0 200px;
   border: 1px solid var(--hog-borde);
   background: var(--hog-bg-panel);
 }
