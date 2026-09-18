@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=EB+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=IBM+Plex+Mono:wght@400;500&display=swap');
 
-/* ===== BANNER + ESCUDO ===== */
+/* ===== BANNER ===== */
 .hog-1x1-banner {
   position: relative;
   width: 100%;
@@ -28,7 +28,7 @@
   z-index: 3;
 }
 
-/* ===== CRONOLOGÍA (acordeón, reemplaza la fila de íconos) ===== */
+/* ===== CRONOLOGÍA ===== */
 .hog-1x1-cronologia {
   border-bottom: 1px solid var(--hog-1x1-borde);
   margin-top: 28px;
@@ -79,7 +79,7 @@
 .hog-1x1-cronologia:focus-within .hog-1x1-cronologia-lista {
   max-height: 320px;
 }
-.hog-1x1-cronologia-item {
+.hog-1x1-contenedor .hog-1x1-cronologia-item {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -91,7 +91,7 @@
   border-top: 1px solid var(--hog-1x1-borde);
   transition: background 0.15s ease;
 }
-.hog-1x1-cronologia-item:hover { background: var(--hog-1x1-acento-suave); }
+.hog-1x1-contenedor .hog-1x1-cronologia-item:hover { background: var(--hog-1x1-acento-suave); }
 .hog-1x1-cronologia-item .hog-1x1-pluma-tema {
   width: 15px;
   height: 15px;
@@ -112,7 +112,7 @@
   60% { transform: translateY(-3px); }
 }
 
-/* ===== DIVISOR ORNAMENTAL ===== */
+/* ===== DIVISOR ===== */
 .hog-1x1-divisor {
   text-align: center;
   color: var(--hog-1x1-acento);
@@ -122,7 +122,7 @@
   opacity: 0.8;
 }
 
-/* ===== CAJA PRINCIPAL: íconos verticales a la izquierda + resumen ===== */
+/* ===== CAJA PRINCIPAL ===== */
 .hog-1x1-caja-principal {
   display: flex;
   gap: 18px;
@@ -270,7 +270,7 @@
   text-align: justify;
   white-space: pre-line;
 }
-.hog-1x1-texto-scroll p { margin: 0 0 16px 0; }
+.hog-1x1
 .hog-1x1-texto-scroll b { color: #e59a5a; font-weight: 700; }
 .hog-1x1-texto-scroll i { color: #efc9a0; font-style: italic; }
 .hog-1x1-texto-scroll em {
@@ -281,7 +281,7 @@
 }
 .hog-1x1-texto-scroll p:last-child { margin-bottom: 0; }
 
-/* ===== PERSONAJES (1x1) ===== */
+/* ===== PERSONAJES ===== */
 .hog-1x1-seccion-personajes {
   padding: 0 20px;
   margin-top: 6px;
