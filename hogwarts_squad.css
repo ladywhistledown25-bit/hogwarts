@@ -174,6 +174,8 @@
   fill: none;
   stroke-width: 1.5;
 }
+
+hog-squad-circulo-icono i { width: 16px; height: 16px; font-size: 13px; line-height: 1; color: var(--hog-squad-acento); display: flex; align-items: center; justify-content: center; }
 .hog-squad-item-icono-v:hover,
 .hog-squad-item-icono-v:focus-within {
   border-color: var(--hog-squad-acento);
@@ -368,11 +370,6 @@
 .hog-squad-credits {
   text-align: center;
   margin-top: 22px;
-}
-.hog-squad-credit-flourish {
-  color: rgba(224, 138, 60, 0.45);
-  font-size: 10px;
-  margin: 0 10px;
 }
 .hog-squad-contenedor .hog-squad-credit-name {
   font-family: 'Cormorant Garamond', serif;
