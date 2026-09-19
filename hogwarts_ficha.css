@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=EB+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=IBM+Plex+Mono:wght@400;500&display=swap');
+﻿@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=EB+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=IBM+Plex+Mono:wght@400;500&display=swap');
 
 /* ===== CONTENEDOR BASE ===== */
 .hog-ficha-contenedor {
@@ -221,6 +221,7 @@
 }
 
 /* ===== NAV (botones) ===== */
+.hog-tab-radio { display: none; }
 .hog-ficha-nav {
   display: flex;
   justify-content: center;
@@ -255,7 +256,9 @@
   border-color: var(--hog-ficha-acento);
   color: var(--hog-ficha-acento);
 }
-.hog-ficha-tab.active {
+#hog-tab-historia:checked ~ .hog-ficha-nav label[for="hog-tab-historia"],
+#hog-tab-cronologia:checked ~ .hog-ficha-nav label[for="hog-tab-cronologia"],
+#hog-tab-relaciones:checked ~ .hog-ficha-nav label[for="hog-tab-relaciones"] {
   background: var(--hog-ficha-acento);
   border-color: var(--hog-ficha-acento);
   color: var(--hog-ficha-bg);
@@ -307,7 +310,9 @@
 
 /* ===== PÁGINAS ===== */
 .hog-ficha-page { display: none; padding: 0 20px; }
-.hog-ficha-page.active { display: block; }
+#hog-tab-historia:checked ~ .hog-page-historia,
+#hog-tab-cronologia:checked ~ .hog-page-cronologia,
+#hog-tab-relaciones:checked ~ .hog-page-relaciones { display: block; }
 
 .hog-ficha-titulo-seccion {
   text-align: center;
@@ -448,6 +453,9 @@
   grid-template-columns: repeat(3, 1fr);
   gap: 10px;
   padding-bottom: 6px;
+  max-height: 340px;
+  overflow-y: auto;
+  overflow-x: hidden;
 }
 .hog-ficha-rel-caja {
   display: flex;
