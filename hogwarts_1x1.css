@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=IBM+Plex+Mono:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500&family=IBM+Plex+Mono:wght@400&display=swap');
 
 /* ===== BANNER ===== */
 .hog-1x1-banner {
@@ -36,13 +36,10 @@
 .hog-1x1-cronologia-header {
   display: flex;
   align-items: center;
-  justify-content: space-between;
   padding: 13px 20px;
   cursor: pointer;
 }
 .hog-1x1-cronologia-titulo {
-  display: flex;
-  align-items: center;
   gap: 9px;
   font-family: 'IBM Plex Mono', monospace;
   font-size: 12px;
@@ -95,6 +92,7 @@
 
 /* ===== CAJA PRINCIPAL ===== */
 .hog-1x1-caja-principal {
+  margin-top: 18px;
   display: flex;
   gap: 18px;
   padding: 0 20px;
@@ -118,6 +116,13 @@
   height: 1px;
   background: var(--hog-1x1-borde);
 }
+.hog-1x1-emblema {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M297.8 422h-3.6l-28.9 58h25.5v17H185.9v-17h44.2l19.8-62c-41.2-7-73.9-25.5-96.9-58.7l-4 28.5c-23.5-19.2-38-49.3-33.9-101.7l-11.5 51.8s-32.45-25.7-12.7-99.1C44.59 145 56.22 23.5 160.8 23.5c137.9 0 86.6 152.8 109.2 190.3l28.4 29.2c-14.1-10.3-27.7-17-40.2-20.7-36.2-10.8-65.6 1.6-81.1 24.7-15.2 22.5-17.3 56.1 2.2 90 18 31.1 55.1 63 118.5 85zm97.3 1c-113.9-15-174.2-55.6-197.7-96.4-14.8-25.6-14.5-50.9-3-67.9 11-16.4 32.2-24.1 57.9-16.5 42.8 12.7 95.7 64.5 142.8 180.8zm-44.3-125.9 96.2 99.2c-12.4 3.5-24.6 6.7-36.4 9.7-19.2-45.8-39.5-81.5-59.8-108.9zM163.1 74.9c-15.3-15.4-29.2-20.1-40.4-18.6-13.5 1.8-24.49 12.7-30.77 28.8-16.69 42.9.21 122.8 71.17 122.8 71 0 87.9-79.9 71.2-122.8-6.3-16.1-17.3-27-30.8-28.8-11.2-1.5-25.1 3.2-40.4 18.6zm-6.4 17.8 6.4 7.5 6.4-7.5c12.5-14.8 22.8-21.1 31.8-19.9 8.1 1.1 13.7 8.6 17.5 18.4 13.4 34.6 1.6 100-55.7 100-57.3 0-69.1-65.4-55.6-100 3.7-9.8 9.3-17.3 17.4-18.4 9-1.2 19.4 5.1 31.8 19.9zm-41.4 24.8 15.4 4.3 22.8 56 19.4-.5 19.6-55.3 16.8-6.7-7.8-19.4-25.5 10.3-13.6 38.3-16.2-40-25.3-7.1z" fill="%23e08a3c"/></svg>') no-repeat center / contain;
+}
+.hog-1x1-emblema-grande { width: 29px; height: 29px; }
 .hog-1x1-item-icono-v {
   position: relative;
   z-index: 1;
@@ -135,11 +140,13 @@
   justify-content: center;
   transition: box-shadow 0.2s ease, border-color 0.2s ease;
 }
-.hog-1x1-item-icono-v:hover .hog-1x1-circulo-icono,
-.hog-1x1-item-icono-v:focus-within .hog-1x1-circulo-icono {
+.hog-1x1-circulo-icono i { font-size: 10px; color: var(--hog-1x1-acento); line-height: 1; }
+.hog-1x1-item-icono-v:hover,
+.hog-1x1-item-icono-v:focus-within {
   border-color: var(--hog-1x1-acento);
   box-shadow: 0 0 8px rgba(224, 138, 60, 0.45);
 }
+.hog-1x1-circulo-icono i { font-size: 10px; color: var(--hog-1x1-acento); line-height: 1; }
 
 /* Panel que se abre hacia la IZQUIERDA (el ícono está en el borde izquierdo,
    el panel crece hacia afuera de la columna de íconos) */
@@ -171,8 +178,10 @@
   opacity: 1;
   transform: translateY(0) scale(1);
 }
-.hog-1x1-panel-icono-v .hog-1x1-contenido-panel-v {
+.hog-1x1-panel-icono-v.hog-1x1-contenido-panel-v {
   line-height: 1.3;
+  flex-direction: column;
+  align-items: flex-start;
 }
 .hog-1x1-etiqueta-dato-v {
   display: block;
@@ -322,12 +331,9 @@
   text-align: center;
   margin-top: 22px;
 }
-.hog-1x1-contenedor .hog-1x1-credit-name {
-  font-family: 'Cormorant Garamond', serif;
-  text-transform: uppercase;
-  letter-spacing: 3px;
-  font-size: 11px;
-  color: rgba(224, 138, 60, 0.45);
-  text-decoration: none;
+.hog-1x1-credito {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M254.25 15.344c-132.537 0-240.188 107.62-240.188 240.156 0 132.537 107.65 240.188 240.188 240.188 132.537 0 240.156-107.65 240.156-240.188 0-132.537-107.62-240.156-240.156-240.156zm0 18.687c122.436 0 221.47 99.034 221.47 221.47 0 65.65-28.465 124.583-73.75 165.125V238.75l14-22.78h-7.595L364 101.5l-43.813 114.47h-8.156l14.595 22.78v33.875h-36.813v-88.188l14.625-22.78h-7.593l-44.406-114.47-44.375 114.47h-7.594l14.03 22.78v123.22h-37.375v-18.094l14.594-22.782h-8.19l-43.78-114.467L95.344 266.78H87.75l14.03 22.783V416.25C59.25 375.9 32.75 318.83 32.75 255.5c0-122.436 99.064-221.47 221.5-221.47zm1.094 160.532h18.687v36.344h-18.686v-36.344zm110.156 87.97h18.688v36.312H365.5V282.53zm-246.656 22.03h18.687v36.344h-18.686v-36.344zm50.875 29.407h18.686v36.342H169.72V333.97zm170.81 30.5h18.69v36.342h-18.69V364.47z" fill="%23e08a3c"/></svg>') no-repeat center / contain;
 }
-.hog-1x1-contenedor .hog-1x1-credit-name:hover { color: rgba(224, 138, 60, 0.75); transition: color 0.2s ease; }
